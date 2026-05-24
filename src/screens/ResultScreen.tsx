@@ -49,7 +49,7 @@ export function ResultScreen({ navigation, route }: any) {
 
   function handlePredictionPress(prediction: Prediction) {
     const classId = CLASS_IDS[prediction.index] ?? "";
-    navigation.navigate("SpeciesDetail", { prediction, classId, photoUri });
+    navigation.navigate("SpeciesDetail", { prediction, classId, photoUri, canSave: true });
   }
 
   return (

@@ -21,6 +21,9 @@ export function SpeciesDetailScreen({ navigation, route }: any) {
 
   // photoUri is passed through from ResultScreen via navigation state
   const photoUri: string = route.params?.photoUri ?? "";
+  // canSave is only set when coming from the camera flow — prevents re-saving
+  // an already-logged sighting when opened from the Sightings tab.
+  const canSave: boolean = route.params?.canSave === true;
 
   function handleSave() {
     saveSighting(prediction.species, prediction.confidence, prediction.index, photoUri);
@@ -53,7 +56,7 @@ export function SpeciesDetailScreen({ navigation, route }: any) {
           </Text>
         </View>
 
-        {photoUri ? (
+        {canSave && photoUri ? (
           <TouchableOpacity
             style={[styles.saveButton, { backgroundColor: theme.accent }]}
             onPress={handleSave}
