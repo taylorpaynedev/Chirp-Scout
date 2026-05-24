@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat ~/Downloads/nabirds/nabirds.py)",
+      "Read(//Users/taylorpayne/Downloads/nabirds/**)",
+      "Bash(pip3 show *)",
+      "Read(//Users/taylorpayne/Documents/Apps/**)",
+      "Bash(npx create-expo-app *)",
+      "Bash(npm install *)",
+      "Bash(npx expo *)",
+      "Bash(python3 -)",
+      "Bash(npx tsc *)",
+      "Bash(brew install *)",
+      "Bash(xcodes install *)"
+    ]
+  }
+}
