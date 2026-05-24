@@ -32,6 +32,7 @@ export function LogScreen({ navigation }: any) {
       },
       classId,
       photoUri: sighting.photoUri,
+      canSave: false,
     });
   }
 
